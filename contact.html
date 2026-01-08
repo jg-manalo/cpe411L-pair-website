@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Quantix Solutions</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">
+                Quantix Solutions
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Solutions</a>
+                <a href="#">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Get in Touch</h1>
+                <p>Have a project in mind? Let's discuss how we can help.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-card">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="sales">Sales & Partnerships</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-card">
+                    <h3>Contact Information</h3>
+                    <p>Reach out to our team directly via the following channels.</p>
+                    
+                    <div class="info-item">
+                        <strong>📍 HQ Office</strong>
+                        <p>123 Innovation Drive<br>Tech Valley, CA 94043</p>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>📧 Email Us</strong>
+                        <p>hello@quantix.solutions</p>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>📞 Call Us</strong>
+                        <p>+1 (555) 019-2834</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <footer class="site-footer">
+        <div class="footer-container">
+            <div class="copyright">
+                &copy; 2026 Quantix Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
