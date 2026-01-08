@@ -1,0 +1,164 @@
+/* --- VARIABLES (Matching Global Theme) --- */
+:root {
+    --color-navy: #0a192f;
+    --color-light-navy: #112240;
+    --color-teal: #64ffda;
+    --color-white: #e6f1ff;
+    --color-slate: #8892b0;
+    --border-color: rgba(230, 241, 255, 0.1);
+}
+
+/* --- PAGE LAYOUT --- */
+.solutions-page {
+    width: 100%;
+    padding-top: 4rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* --- INTRO SECTION --- */
+.solutions-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.solutions-intro h1 {
+    font-size: 3rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.solutions-intro p {
+    color: var(--color-slate);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- GRID LAYOUT --- */
+.grid-layout {
+    display: grid;
+    /* This creates a responsive grid automatically */
+    /* It fits as many 350px cards as possible, then wraps */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+/* --- SOLUTION CARDS --- */
+.solution-card {
+    background-color: var(--color-light-navy);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Makes all cards same height */
+}
+
+.solution-card:hover {
+    transform: translateY(-8px); /* Lifts card up */
+    border-color: var(--color-teal); /* Teal border on hover */
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.icon-wrapper {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    /* In a real project, you might use an SVG here */
+}
+
+.solution-card h3 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.solution-card p {
+    color: var(--color-slate);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Pushes the button to the bottom */
+}
+
+.learn-more {
+    color: var(--color-teal);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: margin-left 0.3s ease;
+    display: inline-block;
+}
+
+.solution-card:hover .learn-more {
+    margin-left: 5px; /* Subtle movement effect on hover */
+}
+
+/* --- CALL TO ACTION (CTA) BANNER --- */
+.cta-banner {
+    padding: 4rem 0;
+    background: linear-gradient(rgba(17, 34, 64, 0.9), rgba(17, 34, 64, 0.9)),
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    margin-bottom: 0; /* Flush with footer */
+}
+
+.cta-content h2 {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    color: var(--color-slate);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Reusing button styles from style.css but ensuring specificity */
+.btn-primary {
+    background-color: var(--color-teal);
+    color: var(--color-navy);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: rgba(100, 255, 218, 0.8);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    .solutions-intro h1 {
+        font-size: 2.25rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr; /* Stack 1 column on mobile */
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+}
