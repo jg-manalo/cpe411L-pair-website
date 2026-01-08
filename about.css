@@ -1,0 +1,159 @@
+/* --- VARIABLES (Imported conceptually from style.css) --- */
+/* We assume style.css is already loaded, so we use the same :root vars */
+
+/* --- PAGE STRUCTURE --- */
+.about-section {
+    padding: 4rem 5%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--color-white);
+}
+
+.container {
+    margin-bottom: 5rem;
+}
+
+/* --- HERO SECTION --- */
+.about-hero {
+    text-align: center;
+    margin-bottom: 5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-white);
+}
+
+.mission-statement {
+    font-size: 1.25rem;
+    color: var(--color-slate-grey);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* --- SECTION TITLES --- */
+.section-title {
+    font-size: 2rem;
+    color: var(--color-teal);
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: left;
+    border-left: 4px solid var(--color-teal);
+    padding-left: 1rem;
+}
+
+/* --- VALUES GRID --- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    background-color: rgba(17, 34, 64, 0.7); /* Slightly lighter Navy */
+    padding: 2.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    border-color: var(--color-teal);
+}
+
+.value-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-slate-light);
+}
+
+.value-card p {
+    color: var(--color-slate-grey);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- TEAM GRID --- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.team-card {
+    background-color: rgba(17, 34, 64, 0.4);
+    padding: 2rem;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    background-color: rgba(17, 34, 64, 0.8);
+    border-color: var(--color-teal);
+}
+
+.team-img {
+    width: 120px;
+    height: 120px;
+    background-color: var(--color-slate-grey);
+    border-radius: 50%; /* Circle */
+    margin: 0 auto 1.5rem auto;
+    opacity: 0.8;
+    /* In a real site, you would add: background-image: url(...); */
+}
+
+.team-card h3 {
+    color: var(--color-white);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-card .role {
+    color: var(--color-teal);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .mission-statement {
+        font-size: 1.1rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr; /* Stack team members on mobile */
+    }
+}
+
+.team-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the image a perfect circle */
+    margin: 0 auto 1.5rem auto; /* Centers the image */
+    display: block;
+    object-fit: cover; /* Ensures image doesn't stretch */
+    border: 2px solid var(--color-teal); /* Adds a professional border */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background behind the avatar */
+    padding: 5px; /* Creates a small gap between border and avatar */
+}
