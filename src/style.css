@@ -1,0 +1,7 @@
+body {
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.7)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Optional: Makes the background stay still while scrolling */
+        }
